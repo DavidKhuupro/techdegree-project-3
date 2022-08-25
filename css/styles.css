@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+ body {
+     margin: 0;
+ }
+
+.intro, 
+footer {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.intro {
+    border-bottom: 2px double black;
+    width: 90%;
+}
+
+h3, p {
+    margin: 2px;
+}
+
+p, footer {
+    color:rgb(167, 163, 160);
+    margin-bottom: 30px;
+}
+
+.heading {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+} 
+
+fieldset {
+    display: block;
+    border: none;
+}
+
+fieldset.contact {
+    border-bottom: 2px solid black;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+label.inlabel {
+    font-weight: 300;
+    display: inline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color:rgb(211, 210, 209);
+    border: 2px solid dodgerblue;
+    border-radius: 4px;
+}
+
+#zip {
+    max-width: 150px;
+}
+
+input[type="checkbox"],
+input[type="button"] {
+    margin: 0 4px 8px 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px 0;
+    color: white;
+    background-color:aquamarine;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin: 1.5rem auto 2.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+
+/*@media screen and (min-width: 768px) {
+
+
+  
+  }*/

@@ -6,49 +6,65 @@ body {
      margin: 0;
 }
 
-.intro, 
-footer {
+/* use imported google font and lighten color */
+p, h3, footer {
+    color:rgb(167, 163, 160);
+    font-family: 'Merriweather', sans-serif;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
-
-h3, p {
-    margin: 2px;
+/* darken text for h3 only */
+h3 {
+    color: #191970;
 }
 
-p, footer {
-    color:rgb(167, 163, 160);
-    margin-bottom: 30px;
+/* lengthen space for footer from bottom of page */
+footer {
+    margin-bottom: 100px;
 }
 
+/* alignment of heading with changes to colors and background colors */
 .heading {
-    display: inline-block;
     width: 100%;
     height: 100px;
     line-height: 100px;
     color: white;
-    background-color: darkblue;
+    background-color: #36454f;
     text-align: center;
     vertical-align: middle;
     margin-top: 0;
 }
 
+/* create border to separate header and form */
+.intro {
+    width: 90%;
+    padding-bottom: 25px;
+    border-bottom: 7px double;
+    margin: auto;
+}
+
 .container {
-    width: 95%;
-    margin: 0 auto;
+    width: 90%;
+    margin: auto;
 } 
 
 /* set border to none to remove all borders */
 fieldset {
-    display: block;
     border: none;
 }
 
-/* set up top and bottom according to layout of example pictures */
+/* create border to separate fieldsets */
 fieldset.contact {
-    border-top: double;
     border-bottom: 1px solid;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset.newsletter {
+    margin: 0;
+    padding: 0;
 }
 
 legend {
@@ -59,14 +75,18 @@ legend {
 }
 
 .inln {
-    display: block;
-    width: 90%;
+/*  **changed display to flex and direction to row for label and input to stack on top of each other */
+    display: flex;
+    flex-direction: column;
     margin-bottom: 4px;
+    font-size: 1.2rem;
 }
 
 .btmlabel {
-    font-weight: 300;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0 8px 0;
+    font-size: 1.2rem;
 }
 
 input[type="text"],
@@ -74,29 +94,46 @@ input[type="email"],
 input[type="tel"],
 textarea,
 select {
-    display: inline-block;
-    margin: 4px 0 8px 0;
+    margin: 4px 0 12px 0;
     padding: 8px;
     font-size: 1rem;
-    width: 100%;
-    height: 50px;
+    height: 60px;
     color: #333;
     background-color:rgb(211, 210, 209);
     border: 2px solid lightgray;
     border-radius: 4px;
 }
 
+/* align placeholder to the right of box*/
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    text-align: right;
+}
+
+/* include focus for when user tabs or clicks on text feild */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid darkblue;
+}
+
+/* keep text input for zipcode at 50% */
 #zip {
-    max-width: 200px;
+    max-width: 50%;
 }
 
-input[type="checkbox"],
-input[type="button"] {
-    margin: 0 4px 8px 0;
+textarea {
+    width: 100%;    
+    height: 100px;
+    margin: 15px 0 0 0;
 }
 
+/* style look and color of button */
 .btn {
     width: 100%;
+    height: 55px;
     padding: 12px 0;
     color: white;
     background-color:aquamarine;
@@ -108,32 +145,35 @@ input[type="button"] {
     cursor: pointer;
 }
 
-textarea {
-    width: 100%;    
-    height: 100px;
-}
-
-/* include focus for when user tabs or clicks on text feild */
-input:focus, textarea:focus, select:focus {
-    outline: 3px solid darkblue;
-}
-
-/* change the layout of form for tablet and desktop screens  */
+/* change the layout of form for desktop screens */
 @media screen and (min-width: 768px) {
+    /* change direction to row to display label and input next to each other */
     .inln {
-        display: inline-block;
-        width: 100px;
-    }
-
-    .container {
-        width: 70%;
+        flex-direction: row;
     }
     
+    /* line up all labels */
+    .inln label {
+        flex-basis: 11rem;
+        margin: auto 0;
+    }
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    textarea,
     select {
-        width: 80%;
+        flex-grow: 1;
+    }
+
+    #zip {
+        max-width: 25%;;
+    }
+
+    /* set max width even with larger screen size */
+    .intro,
+    .container {
+        max-width: 600px;
     }
 }
   

@@ -25,67 +25,78 @@
                 <!-- use a single form tag with seperate sections that include fieldsets and legends -->
                 <form>
                     <fieldset class="contact">
-                        <legend>Contact Information</legend>
+                        <legend>Contact Information</legend><br>
                         <!-- add input, select, textarea with correct attributes -->
-                        <label class="inln" for="name">Full Name</label>
+                        <div class="inln"> <!-- **had to put each label in a div to manipulate flex direction -->
+                        <label for="name">Full Name</label>
                         <input type="text" id="name" name="user-name" placeholder="Required">
-                        
+                        </div>  
                         <!-- include placeholder text in name and email field -->
-                        <label class="inln" for="email">Email</label>
+                        <div class="inln">
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" name="user-email" placeholder="Required">
-                        
-                        <label class="inln" for="phone">Phone Number</label>
+                        </div>
+                        <div class="inln">
+                        <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="user-phone">
-                        
-                        <label class="inln" for="address">Street Address</label>
+                        </div>
+                        <div class="inln">
+                        <label for="address">Street Address</label>
                         <input type="text" id="address" name="user-address">
-                        
-                        <label class="inln" for="city">City</label>
+                        </div>
+                        <div class="inln">
+                        <label for="city">City</label>
                         <input type="text" id="city" name="user-city">
-                        
-                        <label class="inln" for="state">State</label>
+                        </div>
+                        <div class="inln">
+                        <label for="state">State</label>
                         <select id="state" name="user-state">
                             <option value="" disabled selected hidden>Choose State</option>
                             <option value="NY">New York</option>
                             <option value="CA">California</option>
                             <option value="FL">Florida</option>
                         </select>
-                        
-                        <label class="inln" for="zip">Zip Code</label>
+                        </div>
+                        <div class="inln">
+                        <label for="zip">Zip Code</label>
                         <input type="text" id="zip" name="user-zipcode">
-                        
+                        </div>
                     </fieldset>
                         
                     <fieldset class="newsletter">
-                        <legend><b>Newsletter</b></legend>
+                        <legend><b>Newsletter</b></legend><br>
                         <label>Select the newsletter you would like to recieve</label>
                         <br>
+                        <div class="btmlabel">
                         <input type="checkbox" id="html_news" value="html_news" name="user-news">
-                        <label class="btmlabel" for="html_news">HTML News</label>
-                        <br>
+                        <label for="html_news">HTML News</label>
+                        </div>
+                        <div class="btmlabel">
                         <input type="checkbox" id="css_news" value="css_news" name="user-news">
-                        <label class="btmlabel" for="css_news">CSS News</label>
-                        <br>
+                        <label for="css_news">CSS News</label>
+                        </div>
+                        <div class="btmlabel">
                         <input type="checkbox" id="javascript_news" value="javascript_news" name="user-news">
-                        <label class="btmlabel" for="javascript_news">Javascritpt News</label>
-                        <br>
+                        <label for="javascript_news">Javascritpt News</label>
+                        </div>
                         <br>
                         <label>Newsletter Format</label>
                         <br>
+                        <div class="btmlabel">
                         <input type="radio" id="html" value="html" name="user-choice">
-                        <label class="btmlabel" for="html">HTML</label>
-                        <br>
+                        <label for="html">HTML</label>
+                        </div>
+                        <div class="btmlabel">
                         <input type="radio" id="plain_text" value="plain_text" name="user-choice">
-                        <label class="btmlabel" for="plain_text">Plain Text</label>
-                        <br>
-                        <br>
-                        <label class="btmlabel" for="suggestion">Other topics you'd like to hear about</label>
+                        <label for="plain_text">Plain Text</label>
+                        </div>
+                        <label for="suggestion">Other topics you'd like to hear about</label>
                         <textarea id="suggestion" name="user_suggestion"></textarea>                        
                         <button class="btn" type="submit">Sign Up</button>
                     </fieldset>
                 </form>
             </div>
         </main>
-    <footer><i>Copyright</i> The Code Review</footer>
+    <footer><i>Copyright</i>&nbsp The Code Review</footer>
 </body>
 </html>
